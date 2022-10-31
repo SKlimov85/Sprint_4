@@ -23,14 +23,14 @@ public class OrderScooterPage {
     private By telephone = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']"); //Поле Телефон
     private By next = By.cssSelector(".Button_Button__ra12g.Button_Middle__1CSJM"); //Кнопка Далее
     private By date = By.xpath(".//input[@placeholder='* Когда привезти самокат']"); //Поле "Когда привезти самокат"
-    private By choiceDate = By.xpath(".//div[@class='react-datepicker__week']/div[@aria-label='Choose суббота, 1-е октября 2022 г.']"); //Значение выбора даты
+    private By choiceDate = By.xpath(".//div[@class='react-datepicker__week']/div[@aria-label='Choose вторник, 1-е ноября 2022 г.']"); //Значение выбора даты
     private By rentalPeriod = By.className("Dropdown-control"); //Поле Срок аренды
-    private By daySelection  = By.xpath(".//div[@class='Dropdown-menu']/div[3]"); //Выбод дней аренды
-    private By scooterBlack  = By.id("black"); //Чекбокс выбора цвета - чёрный
+    private By daySelection = By.xpath(".//div[@class='Dropdown-menu']/div[3]"); //Выбод дней аренды
+    private By scooterBlack = By.id("black"); //Чекбокс выбора цвета - чёрный
     private By comment = By.cssSelector(".Input_InputContainer__3NykH .Input_Responsible__1jDKN"); //Поле Комментарии
     private By rent = By.xpath(".//div[@class='Order_Buttons__1xGrp']/button[2]"); //Кнокпка Заказать
     private By approve = By.xpath(".//div[@class='Order_Modal__YZ-d3']/div[2]/button[2]"); //Кнопка "Да" в сплывающем окне заказа
-    private By success  = By.className("Order_ModalHeader__3FDaJ"); //Надпись Успешного заказа
+    private By success = By.className("Order_ModalHeader__3FDaJ"); //Надпись Успешного заказа
 
     public OrderScooterPage(WebDriver driver) {
         this.driver = driver;
@@ -56,7 +56,7 @@ public class OrderScooterPage {
         return this;
     }
 
-    public OrderScooterPage clickButtonYes(){
+    public OrderScooterPage clickButtonYes() {
         driver.findElement(approve).click();
         return this;
     }
